@@ -1,0 +1,30 @@
+LAUNCHING APP:
+- Must write privacy policy
+	> Include privacy policy in:
+		- The designated field in the Play Console.
+		- Within the Play distributed app itself.
+	> Privacy policy must:
+		- Comprehensively disclose how your app collects, uses and shares user data, including the types of parties with whom it’s shared.
+- Writing your Google Playstore listing:
+	> See this for rules and best practices:
+		https://play.google.com/about/storelisting-promotional/metadata/
+	> 
+- Getting a content rating:
+	https://support.google.com/googleplay/android-developer/answer/188189?hl=en&#questionnaire
+- Make promotional image:
+	https://android-developers.googleblog.com/2011/10/android-market-featured-image.html
+
+
+
+
+
+
+
+
+
+SETTINGS:
+- Persistent notifications
+
+
+OTHER:
+- Add a welcome screen that asks the user whether to enable multiple patients mode (this can be changed later in the settings).

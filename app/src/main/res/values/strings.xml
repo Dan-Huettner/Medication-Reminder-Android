@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Medication Reminder</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="practice_fragment2_title">Practice Fragment 2</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="practice_fragment3_title">Practice Fragment 3</string>
+    <string name="prev_day_button_text"><![CDATA[<]]></string>
+    <string name="next_day_button_text"><![CDATA[>]]></string>
+    <string name="button_edit_patient_information">Edit Patient Information</string>
+    <string name="enable_reminder">Enable Reminder</string>
+    <string name="action_settings_title">Settings</string>
+</resources>

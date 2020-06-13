@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_patient_viewgroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huettner.dan.medicationreminder.client.userinterface.PatientActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/patient_activity_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/general_header"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageButton
+        android:id="@+id/prev_day_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Previous Day"
+        android:background="@android:color/transparent"
+        android:src="@drawable/prev_date_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_activity_toolbar" />
+
+    <ImageButton
+        android:id="@+id/next_day_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Next Day"
+        android:background="@android:color/transparent"
+        android:src="@drawable/next_date_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_activity_toolbar" />
+
+    <TextView
+        android:id="@+id/selected_date_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="TEST"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:layout_margin="12dp"
+        app:layout_constraintLeft_toRightOf="@id/prev_day_button"
+        app:layout_constraintRight_toLeftOf="@id/next_day_button"
+        app:layout_constraintTop_toBottomOf="@id/patient_activity_toolbar" />
+
+    <ListView
+        android:id="@+id/medications_listview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="20dp"
+        android:choiceMode="singleChoice"
+        android:listSelector="#E4FFF7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prev_day_button"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_buttons_layout_patient_activity"
+        android:background="@drawable/border_general" />
+
+    <TextView
+        android:id="@+id/medications_listview_empty"
+        android:text="Tap the menu button (top-right)\n to add a new medication"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prev_day_button"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_buttons_layout_patient_activity"
+        android:background="@drawable/border_general"
+        android:gravity="center">
+    </TextView>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/bottom_buttons_layout_patient_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/medication_taken_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Medication Taken"
+                android:background="@android:color/transparent"
+                android:src="@drawable/medication_taken_button" />
+
+            <ImageButton
+                android:id="@+id/adjust_medication_time_taken_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Adjust Medication Time Taken"
+                android:background="@android:color/transparent"
+                android:src="@drawable/adjust_medication_time_taken_button" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.constraint.ConstraintLayout>

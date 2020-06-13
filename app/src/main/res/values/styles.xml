@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#5FE5BC</item>
+<!--        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleStyle">@style/title_bar</item>
+        <item name="android:windowTitleBackgroundStyle">@style/title_background</item>
+    </style>
+
+    <style name="title_bar">
+        <item name="android:singleLine">false</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.WindowTitle</item>
+        <item name="android:shadowColor">#BB0000FF</item>
+        <item name="android:shadowRadius">2.75</item>
+    </style>
+
+    <style name="title_background">
+        <item name="android:background">@drawable/header</item>-->
+    </style>
+
+</resources>

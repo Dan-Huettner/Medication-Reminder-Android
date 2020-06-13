@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.huettner.dan.medicationreminder">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="false"
+        tools:replace="android:allowBackup"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.huettner.dan.medicationreminder.client.userinterface.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+        <provider
+            android:name=".server.contentprovider.VideoStoreContentProvider"
+            android:authorities="com.huettner.dan.videorentalstore.server.contentprovider.VideoStoreContentProvider"
+        </activity>
+            android:enabled="true"
+            android:exported="true"
+            android:multiprocess="true"
+            android:permission="com.huettner.dan.videorentalstore.CONTENT_PROVIDER_FULL_ACCESS_PERMISSION"
+            android:syncable="true" />
+        -->
+        <!--
+        <service android:name=".server.notificationsoundservice.NotificationSoundService" />
+-->
+        <receiver
+            android:name="com.huettner.dan.medicationreminder.client.applicationlogic.ReminderBroadcastReceiver"
+            android:enabled="true">
+        </receiver>
+
+        <receiver
+            android:name="com.huettner.dan.medicationreminder.client.applicationlogic.DeviceBootReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="DeviceBootReceiver">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <!--For HTC devices-->
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.huettner.dan.medicationreminder.client.userinterface.PatientActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huettner.dan.medicationreminder.client.userinterface.EditMedicationActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.huettner.dan.medicationreminder.client.userinterface.SettingsActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

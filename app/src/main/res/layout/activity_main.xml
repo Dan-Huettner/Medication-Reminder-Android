@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".client.userinterface.MainActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_activity_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/general_header"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ListView
+            android:id="@+id/patient_listview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="20dp"
+            android:choiceMode="singleChoice"
+            android:listSelector="#E4FFF7"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_toolbar"
+            app:layout_constraintBottom_toTopOf="@+id/medication_log_button_layout"
+            android:background="@drawable/border_general" />
+
+        <TextView
+            android:id="@+id/patient_listview_empty"
+            android:text="Tap the menu button (top-right)\n to add a new patient"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_toolbar"
+            app:layout_constraintBottom_toTopOf="@+id/medication_log_button_layout"
+            android:background="@drawable/border_general"
+            android:gravity="center">
+        </TextView>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/medication_log_button_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:gravity="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageButton
+                    android:id="@+id/medication_log_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Medication Log"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/medication_log_button" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+<!--
+        <Button
+            android:id="@+id/rent_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:onClick="onClickRentButton"
+            android:text="Rent"
+            tools:layout_editor_absoluteX="166dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <Button
+            android:id="@+id/return_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:onClick="onClickReturnButton"
+            android:text="Return"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="320dp" />
+
+        <Button
+            android:id="@+id/practice_stuff_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickPracticeStuffButton"
+            android:text="Practice Stuff" />
+-->
+
+</android.support.constraint.ConstraintLayout>

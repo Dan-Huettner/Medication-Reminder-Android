@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/patient_action_add_medication"
+        android:title="Add New Medication" />
+
+    <item android:id="@+id/patient_action_remove_medication"
+        android:title="Remove Medication" />
+
+    <item android:id="@+id/patient_action_medication_details"
+        android:title="Medication Details" />
+
+    <item android:id="@+id/patient_action_settings"
+        android:title="@string/action_settings_title" />
+
+</menu>
